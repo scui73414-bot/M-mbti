@@ -1,0 +1,79 @@
+{
+  "generatedAt": "2026-07-01T14:52:19.923Z",
+  "build": {
+    "packageManager": "pnpm@11.7.0",
+    "lint": "passed",
+    "build": "passed",
+    "productionStartSmoke": "passed",
+    "npmBinaryAvailable": false
+  },
+  "deployment": {
+    "framework": "Next.js",
+    "target": "Vercel",
+    "vercelJson": true,
+    "envExample": true,
+    "gitignore": true,
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "tsc --noEmit"
+    }
+  },
+  "data": {
+    "total": 84,
+    "reviewed": 84,
+    "fallback": 0,
+    "imageReady": 84,
+    "pendingImage": 0,
+    "destinyTypeTotal": 84,
+    "missingProfileIds": [],
+    "extraProfileIds": [],
+    "duplicateIds": [],
+    "duplicateNameEn": [],
+    "incompleteProfiles": [],
+    "keywordCountErrors": [],
+    "missingImagePromptIds": [],
+    "missingImagePathIds": []
+  },
+  "images": {
+    "cardFiles": 84,
+    "imageReady": 84,
+    "pendingImage": 0,
+    "oldSourceRefs": [],
+    "missingImages": []
+  },
+  "seo": {
+    "metadata": true,
+    "openGraph": true,
+    "twitterCard": true,
+    "favicon": true,
+    "sitemap": true,
+    "robots": true,
+    "resultPageMetadata": true
+  },
+  "privacy": {
+    "privacyPage": true,
+    "disclaimer": true,
+    "localProcessingCopy": true,
+    "noBackend": true
+  },
+  "security": {
+    "bearerTokens": [],
+    "oldLowPolyDefaultRefs": [],
+    "privatePlaceRefs": [],
+    "publicDebugRoutes": [],
+    "keyAssignment": []
+  },
+  "smoke": {
+    "/": 200,
+    "/test": 200,
+    "/types": 200,
+    "/result?type=quality": 200,
+    "/about": 200,
+    "/privacy": 200,
+    "/robots.txt": 200,
+    "/sitemap.xml": 200,
+    "/characters": 200
+  }
+}

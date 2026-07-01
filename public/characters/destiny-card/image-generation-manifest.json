@@ -1,0 +1,1436 @@
+{
+  "generatedAt": "2026-06-30T23:23:39.443Z",
+  "status": "image-ready",
+  "total": 84,
+  "notes": "Imported full-card images with baked text. Frontend should display images directly without overlaying title/keywords/tagline.",
+  "items": [
+    {
+      "id": "treasure",
+      "code": "MG-01",
+      "nameZh": "冷脸淘金兽",
+      "nameEn": "TREASURE",
+      "imagePath": "/characters/destiny-card/cards/treasure-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/treasure-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/treasure-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "冷脸淘金兽的探险之旅.png",
+        "manifestId": "treasure",
+        "manifestCode": "MG-01"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "filter",
+      "code": "MG-07",
+      "nameZh": "高冷筛子精",
+      "nameEn": "FILTER",
+      "imagePath": "/characters/destiny-card/cards/filter-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/filter-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/filter-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "高冷筛子精角色卡设计.png",
+        "manifestId": "filter",
+        "manifestCode": "MG-07"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "worth",
+      "code": "MG-08",
+      "nameZh": "值不值得星人",
+      "nameEn": "WORTH",
+      "imagePath": "/characters/destiny-card/cards/worth-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/worth-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/worth-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "值不值得的星人.png",
+        "manifestId": "worth",
+        "manifestCode": "MG-08"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "operator",
+      "code": "MG-11",
+      "nameZh": "暗线操盘手",
+      "nameEn": "OPERATOR",
+      "imagePath": "/characters/destiny-card/cards/operator-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/operator-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/operator-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "暗线操盘手_策略之力.png",
+        "manifestId": "operator",
+        "manifestCode": "MG-11"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "sniffer",
+      "code": "MG-18",
+      "nameZh": "机会嗅探犬",
+      "nameEn": "SNIFFER",
+      "imagePath": "/characters/destiny-card/cards/sniffer-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/sniffer-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/sniffer-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "机会嗅探犬_敏锐侦察员.png",
+        "manifestId": "sniffer",
+        "manifestCode": "MG-18"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "cost-allergy",
+      "code": "MG-21",
+      "nameZh": "低价过敏者",
+      "nameEn": "VALUE",
+      "imagePath": "/characters/destiny-card/cards/value-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/value-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/value-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "低价的真正背后价值.png",
+        "manifestId": "value",
+        "manifestCode": "MG-21"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "cost-radar",
+      "code": "MG-22",
+      "nameZh": "成本雷达怪",
+      "nameEn": "RADAR",
+      "imagePath": "/characters/destiny-card/cards/radar-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/radar-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/radar-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "成本雷达怪卡牌设计.png",
+        "manifestId": "radar",
+        "manifestCode": "MG-22"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "project-bone",
+      "code": "MG-23",
+      "nameZh": "项目拆骨师",
+      "nameEn": "BONES",
+      "imagePath": "/characters/destiny-card/cards/bones-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/bones-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/bones-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "项目拆解师卡片设计.png",
+        "manifestId": "bones",
+        "manifestCode": "MG-23"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "trend-catcher",
+      "code": "MG-24",
+      "nameZh": "风向捕捉员",
+      "nameEn": "TREND",
+      "imagePath": "/characters/destiny-card/cards/trend-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/trend-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/trend-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "风向捕捉员角色卡设计.png",
+        "manifestId": "trend",
+        "manifestCode": "MG-24"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "resource-auditor",
+      "code": "MG-25",
+      "nameZh": "资源盘货员",
+      "nameEn": "ASSET",
+      "imagePath": "/characters/destiny-card/cards/asset-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/asset-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/asset-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "资源盘货员卡牌设计.png",
+        "manifestId": "asset",
+        "manifestCode": "MG-25"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "silent-appraiser",
+      "code": "MG-26",
+      "nameZh": "暗中估价师",
+      "nameEn": "APPRAISE",
+      "imagePath": "/characters/destiny-card/cards/appraise-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/appraise-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/appraise-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "暗中估价师_精准洞察与评估.png",
+        "manifestId": "appraise",
+        "manifestCode": "MG-26"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "cautious-bettor",
+      "code": "MG-27",
+      "nameZh": "谨慎下注客",
+      "nameEn": "BETTER",
+      "imagePath": "/characters/destiny-card/cards/better-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/better-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/better-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "谨慎下注的战略家.png",
+        "manifestId": "better",
+        "manifestCode": "MG-27"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "info-gap-hunter",
+      "code": "MG-28",
+      "nameZh": "信息差猎人",
+      "nameEn": "GAP",
+      "imagePath": "/characters/destiny-card/cards/gap-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/gap-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/gap-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "信息差猎人卡片设计.png",
+        "manifestId": "gap",
+        "manifestCode": "MG-28"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "roi-believer",
+      "code": "MG-29",
+      "nameZh": "回报率信徒",
+      "nameEn": "ROI",
+      "imagePath": "/characters/destiny-card/cards/roi-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/roi-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/roi-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "回报率信徒的学术世界.png",
+        "manifestId": "roi",
+        "manifestCode": "MG-29"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "opportunity-gate",
+      "code": "MG-30",
+      "nameZh": "机会门卫",
+      "nameEn": "GATE",
+      "imagePath": "/characters/destiny-card/cards/gate-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/gate-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/gate-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "机会之守护者.png",
+        "manifestId": "gate",
+        "manifestCode": "MG-30"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "cold-sand",
+      "code": "MG-31",
+      "nameZh": "冷眼淘沙客",
+      "nameEn": "SAND",
+      "imagePath": "/characters/destiny-card/cards/sand-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/sand-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/sand-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "冷眼淘沙客_静观沙中宝.png",
+        "manifestId": "sand",
+        "manifestCode": "MG-31"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "spark",
+      "code": "MG-02",
+      "nameZh": "省电显眼包",
+      "nameEn": "SPARK",
+      "imagePath": "/characters/destiny-card/cards/spark-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/spark-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/spark-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "省电显眼包卡片海报.png",
+        "manifestId": "spark",
+        "manifestCode": "MG-02"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "low-social",
+      "code": "MG-10",
+      "nameZh": "低耗社交家",
+      "nameEn": "LOWKEY",
+      "imagePath": "/characters/destiny-card/cards/lowkey-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/lowkey-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/lowkey-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "低耗社交家卡片设计.png",
+        "manifestId": "lowkey",
+        "manifestCode": "MG-10"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "slow-glow",
+      "code": "MG-32",
+      "nameZh": "慢热发光体",
+      "nameEn": "GLOW",
+      "imagePath": "/characters/destiny-card/cards/glow-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/glow-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/glow-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "慢热发光体卡片设计.png",
+        "manifestId": "glow",
+        "manifestCode": "MG-32"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "standby-sun",
+      "code": "MG-33",
+      "nameZh": "待机小太阳",
+      "nameEn": "SUN",
+      "imagePath": "/characters/destiny-card/cards/sun-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/sun-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/sun-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "待机小太阳的温暖守护.png",
+        "manifestId": "sun",
+        "manifestCode": "MG-33"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "battery-manager",
+      "code": "MG-34",
+      "nameZh": "电量管理员",
+      "nameEn": "BATTERY",
+      "imagePath": "/characters/destiny-card/cards/battery-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/battery-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/battery-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "电量管理员卡片设计.png",
+        "manifestId": "battery",
+        "manifestCode": "MG-34"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "quiet-presence",
+      "code": "MG-35",
+      "nameZh": "轻声存在感",
+      "nameEn": "PRESENCE",
+      "imagePath": "/characters/destiny-card/cards/presence-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/presence-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/presence-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "轻声存在感卡片插图.png",
+        "manifestId": "presence",
+        "manifestCode": "MG-35"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "low-power-player",
+      "code": "MG-36",
+      "nameZh": "低功耗玩家",
+      "nameEn": "LOWPOWER",
+      "imagePath": "/characters/destiny-card/cards/lowpower-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/lowpower-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/lowpower-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "低功耗玩家卡牌设计.png",
+        "manifestId": "lowpower",
+        "manifestCode": "MG-36"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "selective-boot",
+      "code": "MG-37",
+      "nameZh": "选择性开机人",
+      "nameEn": "BOOT",
+      "imagePath": "/characters/destiny-card/cards/boot-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/boot-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/boot-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "选择性开机人角色卡.png",
+        "manifestId": "boot",
+        "manifestCode": "MG-37"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "lazy-load",
+      "code": "MG-38",
+      "nameZh": "懒加载人格",
+      "nameEn": "LOAD",
+      "imagePath": "/characters/destiny-card/cards/load-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/load-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/load-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "懒加载人格_缓慢而稳切启动.png",
+        "manifestId": "load",
+        "manifestCode": "MG-38"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "vibe-buffer",
+      "code": "MG-39",
+      "nameZh": "氛围缓冲器",
+      "nameEn": "BUFFER",
+      "imagePath": "/characters/destiny-card/cards/buffer-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/buffer-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/buffer-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "氛围缓冲器的温馨时刻.png",
+        "manifestId": "buffer",
+        "manifestCode": "MG-39"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "quiet-light",
+      "code": "MG-40",
+      "nameZh": "安静发光源",
+      "nameEn": "LIGHT",
+      "imagePath": "/characters/destiny-card/cards/light-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/light-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/light-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "安静发光源_温柔星光.png",
+        "manifestId": "light",
+        "manifestCode": "MG-40"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "social-data-saver",
+      "code": "MG-41",
+      "nameZh": "社交省流王",
+      "nameEn": "DATA",
+      "imagePath": "/characters/destiny-card/cards/data-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/data-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/data-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "社交省流王数据卡.png",
+        "manifestId": "data",
+        "manifestCode": "MG-41"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "slow-engine",
+      "code": "MG-42",
+      "nameZh": "慢启动引擎",
+      "nameEn": "ENGINE",
+      "imagePath": "/characters/destiny-card/cards/engine-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/engine-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/engine-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "慢启动引擎角色卡.png",
+        "manifestId": "engine",
+        "manifestCode": "MG-42"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "sleepy-idea",
+      "code": "MG-43",
+      "nameZh": "睡眼灵感包",
+      "nameEn": "IDEA",
+      "imagePath": "/characters/destiny-card/cards/idea-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/idea-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/idea-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "睡眼中的灵感降临.png",
+        "manifestId": "idea",
+        "manifestCode": "MG-43"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "energy-gate",
+      "code": "MG-44",
+      "nameZh": "能量守门员",
+      "nameEn": "ENERGY",
+      "imagePath": "/characters/destiny-card/cards/energy-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/energy-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/energy-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "能量守门员守护者形象.png",
+        "manifestId": "energy",
+        "manifestCode": "MG-44"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "low-battery-bubble",
+      "code": "MG-45",
+      "nameZh": "低电量冒泡人",
+      "nameEn": "BUBBLE",
+      "imagePath": "/characters/destiny-card/cards/bubble-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/bubble-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/bubble-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "低电量冒泡人卡牌插图.png",
+        "manifestId": "bubble",
+        "manifestCode": "MG-45"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "quality",
+      "code": "MG-03",
+      "nameZh": "质感警察",
+      "nameEn": "QUALITY",
+      "imagePath": "/characters/destiny-card/cards/quality-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/quality-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/quality-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "质感警察品质检查卡.png",
+        "manifestId": "quality",
+        "manifestCode": "MG-03"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "anti-pie",
+      "code": "MG-06",
+      "nameZh": "反画饼达人",
+      "nameEn": "REALIST",
+      "imagePath": "/characters/destiny-card/cards/realist-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/realist-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/realist-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "务实规划_拒绝空谈.png",
+        "manifestId": "realist",
+        "manifestCode": "MG-06"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "risk",
+      "code": "MG-09",
+      "nameZh": "风控小祖宗",
+      "nameEn": "RISK",
+      "imagePath": "/characters/destiny-card/cards/risk-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/risk-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/risk-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "风控小祖宗卡片设计.png",
+        "manifestId": "risk",
+        "manifestCode": "MG-09"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "detail",
+      "code": "MG-13",
+      "nameZh": "细节扣分王",
+      "nameEn": "DETAIL",
+      "imagePath": "/characters/destiny-card/cards/detail-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/detail-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/detail-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "细节扣分王_精准严谨.png",
+        "manifestId": "detail",
+        "manifestCode": "MG-13"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "aesthetic-clean",
+      "code": "MG-19",
+      "nameZh": "审美洁癖犯",
+      "nameEn": "PURITY",
+      "imagePath": "/characters/destiny-card/cards/purity-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/purity-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/purity-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "审美洁癖犯卡片设计.png",
+        "manifestId": "purity",
+        "manifestCode": "MG-19"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "color-judge",
+      "code": "MG-46",
+      "nameZh": "配色审判员",
+      "nameEn": "COLOR",
+      "imagePath": "/characters/destiny-card/cards/color-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/color-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/color-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "配色审判员的精妙设计.png",
+        "manifestId": "color",
+        "manifestCode": "MG-46"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "logic-inspector",
+      "code": "MG-47",
+      "nameZh": "逻辑质检员",
+      "nameEn": "LOGIC",
+      "imagePath": "/characters/destiny-card/cards/logic-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/logic-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/logic-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "逻辑质检员角色卡设计.png",
+        "manifestId": "logic",
+        "manifestCode": "MG-47"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "ux-picky",
+      "code": "MG-48",
+      "nameZh": "体验挑刺官",
+      "nameEn": "UX",
+      "imagePath": "/characters/destiny-card/cards/ux-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/ux-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/ux-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "体验挑刺官角色海报.png",
+        "manifestId": "ux",
+        "manifestCode": "MG-48"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "rough-allergy",
+      "code": "MG-49",
+      "nameZh": "粗糙过敏体",
+      "nameEn": "ROUGH",
+      "imagePath": "/characters/destiny-card/cards/rough-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/rough-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/rough-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "粗糙过敏体_精致质感审查.png",
+        "manifestId": "rough",
+        "manifestCode": "MG-49"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "standard-gate",
+      "code": "MG-50",
+      "nameZh": "标准守门员",
+      "nameEn": "STANDARD",
+      "imagePath": "/characters/destiny-card/cards/standard-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/standard-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/standard-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "标准守门员卡片设计.png",
+        "manifestId": "standard",
+        "manifestCode": "MG-50"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "flaw-scanner",
+      "code": "MG-51",
+      "nameZh": "瑕疵扫描仪",
+      "nameEn": "SCAN",
+      "imagePath": "/characters/destiny-card/cards/scan-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/scan-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/scan-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "瑕疵扫描仪卡片设计.png",
+        "manifestId": "scan",
+        "manifestCode": "MG-51"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "texture-checker",
+      "code": "MG-52",
+      "nameZh": "质感验货人",
+      "nameEn": "CHECK",
+      "imagePath": "/characters/destiny-card/cards/check-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/check-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/check-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "质感验货人专辑设计.png",
+        "manifestId": "check",
+        "manifestCode": "MG-52"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "plan-purist",
+      "code": "MG-53",
+      "nameZh": "方案洁癖者",
+      "nameEn": "PLAN",
+      "imagePath": "/characters/destiny-card/cards/plan-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/plan-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/plan-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "方案洁癖者_清晰结构之美.png",
+        "manifestId": "plan",
+        "manifestCode": "MG-53"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "detail-amplifier",
+      "code": "MG-54",
+      "nameZh": "细节放大器",
+      "nameEn": "AMPLIFY",
+      "imagePath": "/characters/destiny-card/cards/amplify-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/amplify-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/amplify-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "细节放大器卡片设计.png",
+        "manifestId": "amplify",
+        "manifestCode": "MG-54"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "low-spec-exit",
+      "code": "MG-55",
+      "nameZh": "低配劝退师",
+      "nameEn": "LOW SPEC",
+      "imagePath": "/characters/destiny-card/cards/low-spec-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/low-spec-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/low-spec-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "低配劝退师角色卡设计.png",
+        "manifestId": "low-spec",
+        "manifestCode": "MG-55"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "ppt-verifier",
+      "code": "MG-56",
+      "nameZh": "PPT鉴伪师",
+      "nameEn": "PPT",
+      "imagePath": "/characters/destiny-card/cards/ppt-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/ppt-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/ppt-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "ppt鉴伪师_装饰与本质.png",
+        "manifestId": "ppt",
+        "manifestCode": "MG-56"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "delivery-acceptor",
+      "code": "MG-57",
+      "nameZh": "交付验收员",
+      "nameEn": "ACCEPT",
+      "imagePath": "/characters/destiny-card/cards/accept-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/accept-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/accept-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "交付验收员角色卡设计.png",
+        "manifestId": "accept",
+        "manifestCode": "MG-57"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "premium-patrol",
+      "code": "MG-58",
+      "nameZh": "高级感巡逻员",
+      "nameEn": "PREMIUM",
+      "imagePath": "/characters/destiny-card/cards/premium-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/premium-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/premium-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "高级感巡逻员人物卡片设计.png",
+        "manifestId": "premium",
+        "manifestCode": "MG-58"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "design-deduct",
+      "code": "MG-59",
+      "nameZh": "设计扣分员",
+      "nameEn": "DEDUCT",
+      "imagePath": "/characters/destiny-card/cards/deduct-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/deduct-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/deduct-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "设计扣分员角色卡.png",
+        "manifestId": "deduct",
+        "manifestCode": "MG-59"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "risk-radar",
+      "code": "MG-60",
+      "nameZh": "风险雷达员",
+      "nameEn": "RISK RADAR",
+      "imagePath": "/characters/destiny-card/cards/risk-radar-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/risk-radar-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/risk-radar-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "风险雷达员角色卡.png",
+        "manifestId": "risk-radar",
+        "manifestCode": "MG-60"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "elegant",
+      "code": "MG-04",
+      "nameZh": "体面卷王",
+      "nameEn": "ELEGANT",
+      "imagePath": "/characters/destiny-card/cards/elegant-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/elegant-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/elegant-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "体面卷王卡牌设计.png",
+        "manifestId": "elegant",
+        "manifestCode": "MG-04"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "silent-grind",
+      "code": "MG-14",
+      "nameZh": "静音卷王",
+      "nameEn": "SILENT",
+      "imagePath": "/characters/destiny-card/cards/silent-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/silent-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/silent-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "静音卷王人物卡.png",
+        "manifestId": "silent",
+        "manifestCode": "MG-14"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "face-engineer",
+      "code": "MG-15",
+      "nameZh": "面子工程师",
+      "nameEn": "FACE",
+      "imagePath": "/characters/destiny-card/cards/face-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/face-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/face-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "面子工程师角色卡展示.png",
+        "manifestId": "face",
+        "manifestCode": "MG-15"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "dignity",
+      "code": "MG-20",
+      "nameZh": "体面续命人",
+      "nameEn": "DIGNITY",
+      "imagePath": "/characters/destiny-card/cards/dignity-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/dignity-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/dignity-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "体面续命人生存卡.png",
+        "manifestId": "dignity",
+        "manifestCode": "MG-20"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "polished-exec",
+      "code": "MG-61",
+      "nameZh": "精致执行官",
+      "nameEn": "EXEC",
+      "imagePath": "/characters/destiny-card/cards/exec-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/exec-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/exec-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "精致执行官角色卡.png",
+        "manifestId": "exec",
+        "manifestCode": "MG-61"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "polished-deliverer",
+      "code": "MG-62",
+      "nameZh": "漂亮交付人",
+      "nameEn": "POLISH",
+      "imagePath": "/characters/destiny-card/cards/polish-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/polish-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/polish-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "漂亮交付品的完美展示.png",
+        "manifestId": "polish",
+        "manifestCode": "MG-62"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "suit-tired",
+      "code": "MG-63",
+      "nameZh": "西装疲惫怪",
+      "nameEn": "SUIT",
+      "imagePath": "/characters/destiny-card/cards/suit-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/suit-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/suit-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "西装疲惫怪卡片设计.png",
+        "manifestId": "suit",
+        "manifestCode": "MG-63"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "elegant-overtime",
+      "code": "MG-64",
+      "nameZh": "优雅加班机",
+      "nameEn": "OVERTIME",
+      "imagePath": "/characters/destiny-card/cards/overtime-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/overtime-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/overtime-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "优雅加班机_夜晚中的坚持.png",
+        "manifestId": "overtime",
+        "manifestCode": "MG-64"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "perfect-closer",
+      "code": "MG-65",
+      "nameZh": "完美收尾者",
+      "nameEn": "CLOSER",
+      "imagePath": "/characters/destiny-card/cards/closer-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/closer-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/closer-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "完美收尾者_完美交付.png",
+        "manifestId": "closer",
+        "manifestCode": "MG-65"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "result-polite",
+      "code": "MG-66",
+      "nameZh": "结果体面派",
+      "nameEn": "RESULT",
+      "imagePath": "/characters/destiny-card/cards/result-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/result-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/result-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "结果体面派的精英奖状.png",
+        "manifestId": "result",
+        "manifestCode": "MG-66"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "self-discipline-front",
+      "code": "MG-67",
+      "nameZh": "自律门面人",
+      "nameEn": "DISCIPLINE",
+      "imagePath": "/characters/destiny-card/cards/discipline-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/discipline-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/discipline-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "自律的成就与门面.png",
+        "manifestId": "discipline",
+        "manifestCode": "MG-67"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "refined-ascetic",
+      "code": "MG-68",
+      "nameZh": "精致苦行僧",
+      "nameEn": "ASCETIC",
+      "imagePath": "/characters/destiny-card/cards/ascetic-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/ascetic-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/ascetic-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "精致苦行僧卡片插画.png",
+        "manifestId": "ascetic",
+        "manifestCode": "MG-68"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "composed-sprinter",
+      "code": "MG-69",
+      "nameZh": "端着冲刺员",
+      "nameEn": "SPRINTER",
+      "imagePath": "/characters/destiny-card/cards/sprinter-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/sprinter-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/sprinter-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "跑向目标_保持体面.png",
+        "manifestId": "sprinter",
+        "manifestCode": "MG-69"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "persona-keeper",
+      "code": "MG-70",
+      "nameZh": "人设维护师",
+      "nameEn": "PERSONA",
+      "imagePath": "/characters/destiny-card/cards/persona-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/persona-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/persona-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "人设维护师精选卡牌.png",
+        "manifestId": "persona",
+        "manifestCode": "MG-70"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "high-spec-worker",
+      "code": "MG-71",
+      "nameZh": "高配打工魂",
+      "nameEn": "HIGH SPEC",
+      "imagePath": "/characters/destiny-card/cards/high-spec-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/high-spec-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/high-spec-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "高配打工魂_精英效率模式.png",
+        "manifestId": "high-spec",
+        "manifestCode": "MG-71"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "pretty-win",
+      "code": "MG-72",
+      "nameZh": "漂亮赢法控",
+      "nameEn": "WIN",
+      "imagePath": "/characters/destiny-card/cards/win-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/win-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/win-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "漂亮赢法控.png",
+        "manifestId": "win",
+        "manifestCode": "MG-72"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "frostfire",
+      "code": "MG-05",
+      "nameZh": "心热嘴冷怪",
+      "nameEn": "FROSTFIRE",
+      "imagePath": "/characters/destiny-card/cards/frostfire-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/frostfire-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/frostfire-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "心热嘴冷怪卡牌设计.png",
+        "manifestId": "frostfire",
+        "manifestCode": "MG-05"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "freezer",
+      "code": "MG-12",
+      "nameZh": "情绪冷藏师",
+      "nameEn": "FREEZER",
+      "imagePath": "/characters/destiny-card/cards/freezer-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/freezer-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/freezer-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "情绪冷藏师的卡片设计.png",
+        "manifestId": "freezer",
+        "manifestCode": "MG-12"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "hard-mouth",
+      "code": "MG-16",
+      "nameZh": "嘴硬保温杯",
+      "nameEn": "THERMOS",
+      "imagePath": "/characters/destiny-card/cards/thermos-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/thermos-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/thermos-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "嘴硬保温杯与冬日温暖.png",
+        "manifestId": "thermos",
+        "manifestCode": "MG-16"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "overthink",
+      "code": "MG-17",
+      "nameZh": "精准内耗机",
+      "nameEn": "OVERTHINK",
+      "imagePath": "/characters/destiny-card/cards/overthink-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/overthink-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/overthink-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "精准内耗机角色卡设计.png",
+        "manifestId": "overthink",
+        "manifestCode": "MG-17"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "cold-shell-stove",
+      "code": "MG-73",
+      "nameZh": "冷壳火炉",
+      "nameEn": "STOVE",
+      "imagePath": "/characters/destiny-card/cards/stove-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/stove-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/stove-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "冷壳火炉_守护之火.png",
+        "manifestId": "stove",
+        "manifestCode": "MG-73"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "ellipsis-face",
+      "code": "MG-74",
+      "nameZh": "表情省略号",
+      "nameEn": "ELLIPSIS",
+      "imagePath": "/characters/destiny-card/cards/ellipsis-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/ellipsis-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/ellipsis-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "表情省略号的魔法少年.png",
+        "manifestId": "ellipsis",
+        "manifestCode": "MG-74"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "silent-burner",
+      "code": "MG-75",
+      "nameZh": "沉默燃烧者",
+      "nameEn": "BURN",
+      "imagePath": "/characters/destiny-card/cards/burn-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/burn-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/burn-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "沉默燃烧者_命运的烈焰.png",
+        "manifestId": "burn",
+        "manifestCode": "MG-75"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "fridge-care",
+      "code": "MG-76",
+      "nameZh": "冰箱式关心",
+      "nameEn": "FRIDGE",
+      "imagePath": "/characters/destiny-card/cards/fridge-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/fridge-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/fridge-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "冰箱式关心_细心守护.png",
+        "manifestId": "fridge",
+        "manifestCode": "MG-76"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "hard-soft-heart",
+      "code": "MG-77",
+      "nameZh": "嘴硬软心人",
+      "nameEn": "SOFT",
+      "imagePath": "/characters/destiny-card/cards/soft-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/soft-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/soft-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "嘴硬软心人角色卡设计.png",
+        "manifestId": "soft",
+        "manifestCode": "MG-77"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "cold-guard",
+      "code": "MG-78",
+      "nameZh": "冷脸护短王",
+      "nameEn": "GUARD",
+      "imagePath": "/characters/destiny-card/cards/guard-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/guard-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/guard-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "冷脸护短王卡片设计.png",
+        "manifestId": "guard",
+        "manifestCode": "MG-78"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "emotion-zip",
+      "code": "MG-79",
+      "nameZh": "情绪压缩包",
+      "nameEn": "ZIP",
+      "imagePath": "/characters/destiny-card/cards/zip-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/zip-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/zip-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "情绪压缩包卡片设计.png",
+        "manifestId": "zip",
+        "manifestCode": "MG-79"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "secret-keeper",
+      "code": "MG-80",
+      "nameZh": "心事保密员",
+      "nameEn": "SECRET",
+      "imagePath": "/characters/destiny-card/cards/secret-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/secret-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/secret-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "心事保密员_卡牌设计.png",
+        "manifestId": "secret",
+        "manifestCode": "MG-80"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "inner-grind-stove",
+      "code": "MG-81",
+      "nameZh": "外冷内卷炉",
+      "nameEn": "INNERGRIND",
+      "imagePath": "/characters/destiny-card/cards/innergrind-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/innergrind-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/innergrind-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "外冷内卷炉角色卡设计.png",
+        "manifestId": "innergrind",
+        "manifestCode": "MG-81"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "low-temp-companion",
+      "code": "MG-82",
+      "nameZh": "低温陪伴者",
+      "nameEn": "LOWTEMP",
+      "imagePath": "/characters/destiny-card/cards/lowtemp-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/lowtemp-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/lowtemp-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "低温陪伴者卡牌设计.png",
+        "manifestId": "lowtemp",
+        "manifestCode": "MG-82"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "hidden-heat",
+      "code": "MG-83",
+      "nameZh": "隐藏热源体",
+      "nameEn": "HEAT",
+      "imagePath": "/characters/destiny-card/cards/heat-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/heat-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/heat-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "隐藏热源体_炽热未熄.png",
+        "manifestId": "heat",
+        "manifestCode": "MG-83"
+      },
+      "status": "image-ready"
+    },
+    {
+      "id": "im-fine-star",
+      "code": "MG-84",
+      "nameZh": "我没事星人",
+      "nameEn": "FINE",
+      "imagePath": "/characters/destiny-card/cards/fine-card.png",
+      "thumbnailPath": "/characters/destiny-card/cards/fine-card.png",
+      "shareImagePath": "/characters/destiny-card/cards/fine-card.png",
+      "assetType": "full-card-with-baked-text",
+      "imageReview": {
+        "status": "image-ready",
+        "sourceFile": "我没事星人卡片设计.png",
+        "manifestId": "fine",
+        "manifestCode": "MG-84"
+      },
+      "status": "image-ready"
+    }
+  ]
+}
