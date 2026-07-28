@@ -2,11 +2,16 @@
 
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/Button";
-import { generateBaziProfile, type BaziProfile, type BirthInput } from "@/lib/bazi";
+import { generateBaziProfile, type BirthInput } from "@/lib/bazi";
+import {
+  baziStorageKeys,
+  createStoredBaziProfile,
+  readStorageJson,
+} from "@/lib/bazi/storage";
 import { hashString } from "@/lib/matching/hash";
 
 const fieldClass =
-  "mt-2 h-12 w-full rounded-2xl border border-[#dce4d9] bg-white px-4 text-sm text-[#26302a] outline-none transition focus:border-[#8ca58b] focus:ring-4 focus:ring-[#8ca58b]/15";
+  "mt-2 h-12 w-full min-w-0 rounded-xl border border-[var(--line)] bg-[var(--surface-pure)] px-4 text-sm text-[var(--ink)] outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-[var(--muted)] hover:border-[var(--line-strong)] focus:border-[var(--ink)] focus:ring-2 focus:ring-[var(--line-strong)]";
 
 const birthHours = [
   "00:00 子时",
@@ -29,27 +34,23 @@ function readNumber(value: FormDataEntryValue | null, fallback: number) {
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
 }
 
-const fingerprintMapKey = "mingge:fingerprintResultMap";
-const recentResultsKey = "mingge:recentResultIds";
-const lastBaziProfileKey = "mingge:lastBaziProfile";
-
-function readJson<T>(key: string, fallback: T): T {
-  try {
-    const value = window.localStorage.getItem(key);
-    return value ? (JSON.parse(value) as T) : fallback;
-  } catch {
-    return fallback;
-  }
-}
-
 function persistMatch(fingerprint: string, typeId: string) {
-  const fingerprintMap = readJson<Record<string, string>>(fingerprintMapKey, {});
-  const recentIds = readJson<string[]>(recentResultsKey, []);
+  const fingerprintMap = readStorageJson<Record<string, string>>(
+    baziStorageKeys.fingerprintMap,
+    {},
+  );
+  const recentIds = readStorageJson<string[]>(
+    baziStorageKeys.recentResults,
+    [],
+  );
   fingerprintMap[fingerprint] = typeId;
 
-  window.localStorage.setItem(fingerprintMapKey, JSON.stringify(fingerprintMap));
   window.localStorage.setItem(
-    recentResultsKey,
+    baziStorageKeys.fingerprintMap,
+    JSON.stringify(fingerprintMap),
+  );
+  window.localStorage.setItem(
+    baziStorageKeys.recentResults,
     JSON.stringify([typeId, ...recentIds.filter((id) => id !== typeId)].slice(0, 10)),
   );
 }
@@ -86,18 +87,12 @@ function parseTime(value: FormDataEntryValue | null) {
   };
 }
 
-function createStoredProfile(profile: BaziProfile) {
-  const { input: _input, ...shareableProfile } = profile;
-
-  return shareableProfile;
-}
-
 export function TestForm() {
   const router = useRouter();
 
   return (
     <form
-      className="space-y-5 rounded-3xl border border-[#e7efe4] bg-white p-5 shadow-sm shadow-[#38463b]/5"
+      className="space-y-6 rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-5 sm:p-7"
       onSubmit={async (event) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);
@@ -114,35 +109,46 @@ export function TestForm() {
           useTrueSolarTime: formData.get("useTrueSolarTime") === "on",
         };
         const fingerprint = createClientFingerprint(input);
-        const fingerprintMap = readJson<Record<string, string>>(fingerprintMapKey, {});
+        const fingerprintMap = readStorageJson<Record<string, string>>(
+          baziStorageKeys.fingerprintMap,
+          {},
+        );
         const cachedTypeId = fingerprintMap[fingerprint];
 
         if (cachedTypeId) {
           const profile = await generateBaziProfile(input, { fingerprint });
           window.localStorage.setItem(
-            lastBaziProfileKey,
-            JSON.stringify(createStoredProfile({ ...profile, matchedTypeId: cachedTypeId })),
+            baziStorageKeys.lastProfile,
+            JSON.stringify(
+              createStoredBaziProfile({
+                ...profile,
+                matchedTypeId: cachedTypeId,
+              }),
+            ),
           );
           persistMatch(fingerprint, cachedTypeId);
           router.push(`/result?type=${cachedTypeId}`);
           return;
         }
 
-        const recentIds = readJson<string[]>(recentResultsKey, []);
+        const recentIds = readStorageJson<string[]>(
+          baziStorageKeys.recentResults,
+          [],
+        );
         const profile = await generateBaziProfile(input, {
           avoidIds: recentIds.slice(0, 5),
           fingerprint,
         });
         window.localStorage.setItem(
-          lastBaziProfileKey,
-          JSON.stringify(createStoredProfile(profile)),
+          baziStorageKeys.lastProfile,
+          JSON.stringify(createStoredBaziProfile(profile)),
         );
         persistMatch(fingerprint, profile.matchedTypeId);
         router.push(`/result?type=${profile.matchedTypeId}`);
       }}
     >
       <fieldset>
-        <legend className="text-sm font-semibold text-[#2b342e]">
+        <legend className="text-sm font-semibold text-[var(--ink)]">
           出生日期类型
         </legend>
         <div className="mt-2 grid grid-cols-2 gap-3">
@@ -150,7 +156,7 @@ export function TestForm() {
             { label: "阳历", value: "solar" },
             { label: "农历", value: "lunar" },
           ].map((item) => (
-            <label key={item.value} className="group">
+            <label key={item.value} className="group cursor-pointer">
               <input
                 className="peer sr-only"
                 type="radio"
@@ -158,7 +164,7 @@ export function TestForm() {
                 value={item.value}
                 defaultChecked={item.value === "solar"}
               />
-              <span className="flex h-12 items-center justify-center rounded-2xl border border-[#dce4d9] bg-[#f8faf6] text-sm font-semibold text-[#526057] transition peer-checked:border-[#8ca58b] peer-checked:bg-[#eef5eb] peer-checked:text-[#2f4a3c]">
+              <span className="flex h-12 items-center justify-center rounded-xl border border-[var(--line)] bg-[var(--surface-pure)] text-sm font-semibold text-[var(--ink-soft)] transition-[border-color,background-color,color,box-shadow] duration-200 hover:border-[var(--line-strong)] peer-checked:border-[var(--ink)] peer-checked:bg-[var(--ink)] peer-checked:text-[var(--white)] peer-focus-visible:ring-2 peer-focus-visible:ring-[var(--ink)] peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-[var(--surface)]">
                 {item.label}
               </span>
             </label>
@@ -166,9 +172,9 @@ export function TestForm() {
         </div>
       </fieldset>
 
-      <div className="grid grid-cols-3 gap-3">
-        <div>
-          <label className="text-sm font-semibold text-[#2b342e]" htmlFor="year">
+      <div className="grid grid-cols-3 gap-2.5 sm:gap-3">
+        <div className="min-w-0">
+          <label className="text-sm font-semibold text-[var(--ink)]" htmlFor="year">
             年份
           </label>
           <input
@@ -180,8 +186,8 @@ export function TestForm() {
             placeholder="1998"
           />
         </div>
-        <div>
-          <label className="text-sm font-semibold text-[#2b342e]" htmlFor="month">
+        <div className="min-w-0">
+          <label className="text-sm font-semibold text-[var(--ink)]" htmlFor="month">
             月份
           </label>
           <input
@@ -193,8 +199,8 @@ export function TestForm() {
             placeholder="08"
           />
         </div>
-        <div>
-          <label className="text-sm font-semibold text-[#2b342e]" htmlFor="day">
+        <div className="min-w-0">
+          <label className="text-sm font-semibold text-[var(--ink)]" htmlFor="day">
             日期
           </label>
           <input
@@ -209,7 +215,7 @@ export function TestForm() {
       </div>
 
       <div>
-        <label className="text-sm font-semibold text-[#2b342e]" htmlFor="hour">
+        <label className="text-sm font-semibold text-[var(--ink)]" htmlFor="hour">
           出生时间
         </label>
         <select className={fieldClass} defaultValue="09:00" id="hour" name="hour">
@@ -223,7 +229,7 @@ export function TestForm() {
 
       <div>
         <label
-          className="text-sm font-semibold text-[#2b342e]"
+          className="text-sm font-semibold text-[var(--ink)]"
           htmlFor="birthplace"
         >
           出生地
@@ -236,12 +242,12 @@ export function TestForm() {
         />
       </div>
 
-      <label className="flex items-center justify-between rounded-2xl border border-[#e2ebdf] bg-[#f4f8f1] px-4 py-3">
+      <label className="flex cursor-pointer items-center justify-between gap-4 rounded-xl border border-[var(--line)] bg-[var(--surface-pure)] px-4 py-3">
         <span>
-          <span className="block text-sm font-semibold text-[#2b342e]">
+          <span className="block text-sm font-semibold text-[var(--ink)]">
             启用真太阳时
           </span>
-          <span className="text-xs text-[#657168]">默认开启，仅用于演示口径</span>
+          <span className="text-xs text-[var(--muted)]">默认开启，仅用于演示口径</span>
         </span>
         <input
           className="peer sr-only"
@@ -249,15 +255,15 @@ export function TestForm() {
           type="checkbox"
           defaultChecked
         />
-        <span className="relative h-7 w-12 rounded-full bg-[#cfd9cb] transition after:absolute after:left-1 after:top-1 after:h-5 after:w-5 after:rounded-full after:bg-white after:shadow-sm after:transition peer-checked:bg-[#6f8b70] peer-checked:after:translate-x-5" />
+        <span className="relative h-7 w-12 shrink-0 rounded-full bg-[var(--line-strong)] transition-[background-color,box-shadow] duration-200 after:absolute after:left-1 after:top-1 after:h-5 after:w-5 after:rounded-full after:bg-[var(--white)] after:transition-transform after:duration-200 peer-checked:bg-[var(--ink)] peer-checked:after:translate-x-5 peer-focus-visible:ring-2 peer-focus-visible:ring-[var(--ink)] peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-[var(--surface)]" />
       </label>
 
-      <div className="rounded-2xl border border-[#e7efe4] bg-[#f8faf6] p-4">
-        <h2 className="text-sm font-bold text-[#2b342e]">为什么默认启用真太阳时？</h2>
-        <p className="mt-2 text-xs leading-6 text-[#68746c]">
+      <div className="rounded-xl border border-[var(--line)] bg-[var(--surface-pure)] p-4">
+        <h2 className="text-sm font-bold text-[var(--ink)]">为什么默认启用真太阳时？</h2>
+        <p className="mt-2 text-xs leading-6 text-[var(--muted)]">
           同一个北京时间，在不同出生地对应的太阳位置会略有差异。为了让结果更稳定，本测试默认使用出生地进行真太阳时校正。
         </p>
-        <p className="mt-2 text-xs font-semibold leading-6 text-[#68746c]">
+        <p className="mt-2 text-xs font-semibold leading-6 text-[var(--ink-soft)]">
           当前版本采用经度校正的近似真太阳时，结果仅供娱乐与自我观察。
         </p>
       </div>

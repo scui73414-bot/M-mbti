@@ -3,7 +3,7 @@ const disclaimer =
 
 export function Disclaimer() {
   return (
-    <p className="text-center text-xs leading-5 text-[#7b867e]">
+    <p className="text-center text-xs leading-5 text-[var(--muted)]">
       {disclaimer}
     </p>
   );

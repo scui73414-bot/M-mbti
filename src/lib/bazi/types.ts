@@ -1,4 +1,5 @@
-import type { TypeRarity } from "@/data/types";
+import type { TenGodPatternResult } from "@/lib/bazi/patterns";
+import type { ShenShaResult } from "@/lib/bazi/shenSha";
 
 export type CalendarType = "lunar" | "solar";
 
@@ -104,6 +105,8 @@ export type BaziProfile = {
     bias: ElementBias;
   };
   energyMode: EnergyMode;
+  shenSha: ShenShaResult;
+  tenGodPatterns: TenGodPatternResult;
   matchedTypeId: string;
   debug?: {
     engine: string;
@@ -112,10 +115,9 @@ export type BaziProfile = {
     score?: number;
     ranking?: Array<{
       id: string;
-      nameCn: string;
+      socialName: string;
       code: string;
       score: number;
-      rarity?: TypeRarity;
     }>;
   };
 };

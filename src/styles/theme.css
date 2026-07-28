@@ -1,0 +1,19 @@
+:root {
+  --page-background: #f4f4f1;
+  --surface: #fbfbf8;
+  --surface-pure: #ffffff;
+  --ink: #171816;
+  --ink-soft: #434540;
+  --muted: #777a73;
+  --line: #d6d6cf;
+  --line-strong: #a5a69f;
+  --black: #111210;
+  --white: #ffffff;
+
+  --background: var(--page-background);
+  --foreground: var(--ink);
+  --font-card-display: "Songti SC", "STSong", "Noto Serif CJK SC",
+    "Source Han Serif SC", "SimSun", serif;
+  --font-editorial: "Songti SC", "STSong", "Noto Serif CJK SC",
+    "Source Han Serif SC", "SimSun", serif;
+}

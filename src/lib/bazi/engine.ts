@@ -8,6 +8,8 @@ import {
   type DateTimeParts,
 } from "@/lib/bazi/solarTime";
 import { inferEnergyMode } from "@/lib/bazi/strength";
+import { analyzeTenGodPatterns } from "@/lib/bazi/patterns";
+import { calculateShenSha } from "@/lib/bazi/shenSha";
 import {
   getMainTenGodGroup,
   getTenGod,
@@ -115,6 +117,8 @@ function buildProfileFromLunar(
     elementBias,
     pillars,
   });
+  const shenSha = calculateShenSha(pillars);
+  const tenGodPatterns = analyzeTenGodPatterns(pillars, dayStem);
   const fingerprint = options.fingerprint ?? createFingerprint(input, trueSolarDateTime);
   const matched = matchDestinyType(
     {
@@ -122,6 +126,8 @@ function buildProfileFromLunar(
       tenGods: { mainGroup },
       elements: { bias: elementBias },
       energyMode,
+      shenSha,
+      tenGodPatterns,
     },
     {
       ...options,
@@ -149,6 +155,8 @@ function buildProfileFromLunar(
       bias: elementBias,
     },
     energyMode,
+    shenSha,
+    tenGodPatterns,
     matchedTypeId: matched.matchedType.id,
     debug: {
       engine: "lunar-typescript",
@@ -157,10 +165,9 @@ function buildProfileFromLunar(
       score: matched.score,
       ranking: matched.ranking.slice(0, 10).map((item) => ({
         id: item.type.id,
-        nameCn: item.type.nameCn,
+        socialName: item.type.socialName,
         code: item.type.code,
         score: item.score,
-        rarity: item.type.rarity,
       })),
     },
   };
@@ -189,12 +196,16 @@ function buildFallbackProfile(input: BirthInput, error: unknown): BaziProfile {
     elementBias: bias,
     pillars,
   });
+  const shenSha = calculateShenSha(pillars);
+  const tenGodPatterns = analyzeTenGodPatterns(pillars, dayStem);
   const matched = matchDestinyType(
     {
       dayMaster,
       tenGods: { mainGroup },
       elements: { bias },
       energyMode,
+      shenSha,
+      tenGodPatterns,
     },
     { fingerprint },
   );
@@ -216,6 +227,8 @@ function buildFallbackProfile(input: BirthInput, error: unknown): BaziProfile {
       bias,
     },
     energyMode,
+    shenSha,
+    tenGodPatterns,
     matchedTypeId: matched.matchedType.id,
     debug: {
       engine: "deterministic-fallback",
@@ -228,10 +241,9 @@ function buildFallbackProfile(input: BirthInput, error: unknown): BaziProfile {
       score: matched.score,
       ranking: matched.ranking.slice(0, 10).map((item) => ({
         id: item.type.id,
-        nameCn: item.type.nameCn,
+        socialName: item.type.socialName,
         code: item.type.code,
         score: item.score,
-        rarity: item.type.rarity,
       })),
     },
   };

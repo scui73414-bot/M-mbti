@@ -4,31 +4,27 @@ import { useMemo, useState } from "react";
 import { TypeCard } from "@/components/TypeCard";
 import {
   destinyTypes,
-  visualFamilyLabels,
+  elementFamilyOptions,
+  elementThemes,
+  getStructureDisplayName,
+  structureOptions,
+  tenGodArchetypes,
+  tenGodOptions,
   type DestinyType,
-  type TypeTone,
-  type VisualFamily,
+  type ElementFamily,
+  type TenGod,
 } from "@/data/types";
 
-const familyOptions: Array<VisualFamily | "all"> = [
-  "all",
-  "treasure",
-  "spark",
-  "quality",
-  "elegant",
-  "frostfire",
-];
+type AllOption = "all";
 
-const toneOptions: Array<TypeTone | "all"> = [
-  "all",
-  "自嘲",
-  "冷幽默",
-  "职场",
-  "社交",
-  "内耗",
-  "野心",
-  "审美",
-];
+const filterControlClass =
+  "mt-2 h-12 w-full rounded-xl border px-4 text-sm outline-none transition-[border-color,background-color,color,box-shadow] duration-200 focus:border-[var(--ink)] focus:ring-2 focus:ring-[var(--line-strong)]";
+
+const inactiveSelectClass =
+  "border-[var(--line)] bg-[var(--surface-pure)] text-[var(--ink)] hover:border-[var(--line-strong)]";
+
+const activeSelectClass =
+  "border-[var(--ink)] bg-[var(--ink)] text-[var(--white)]";
 
 function matchesSearch(type: DestinyType, query: string) {
   const normalized = query.trim().toLowerCase();
@@ -38,14 +34,18 @@ function matchesSearch(type: DestinyType, query: string) {
   }
 
   return [
-    type.nameCn,
+    type.destinyMainName,
+    type.socialName,
     type.nameEn,
     type.oneLiner,
-    type.subtitle,
     type.code,
-    type.typeCode,
+    type.dominantTenGod,
+    type.spiritArchetype,
+    elementThemes[type.elementFamily].name,
+    getStructureDisplayName(type.structureKey, type.dominantTenGod),
     ...type.keywords,
   ]
+    .filter(Boolean)
     .join(" ")
     .toLowerCase()
     .includes(normalized);
@@ -53,92 +53,132 @@ function matchesSearch(type: DestinyType, query: string) {
 
 export function TypesExplorer() {
   const [query, setQuery] = useState("");
-  const [family, setFamily] = useState<VisualFamily | "all">("all");
-  const [tone, setTone] = useState<TypeTone | "all">("all");
+  const [element, setElement] = useState<ElementFamily | AllOption>("all");
+  const [tenGod, setTenGod] = useState<TenGod | AllOption>("all");
+  const [structure, setStructure] = useState<string | AllOption>("all");
 
-  const familyCounts = useMemo(() => {
+  const elementCounts = useMemo(() => {
     return destinyTypes.reduce(
       (counts, type) => ({
         ...counts,
-        [type.visualFamily]: (counts[type.visualFamily] ?? 0) + 1,
+        [type.elementFamily]: (counts[type.elementFamily] ?? 0) + 1,
       }),
-      {} as Record<VisualFamily, number>,
+      {} as Record<ElementFamily, number>,
     );
   }, []);
 
   const filteredTypes = useMemo(() => {
     return destinyTypes.filter((type) => {
-      const familyMatched = family === "all" || type.visualFamily === family;
-      const toneMatched = tone === "all" || type.tone === tone;
-      return familyMatched && toneMatched && matchesSearch(type, query);
+      const elementMatched =
+        element === "all" || type.elementFamily === element;
+      const tenGodMatched =
+        tenGod === "all" || type.dominantTenGod === tenGod;
+      const structureMatched =
+        structure === "all" || type.structureKey === structure;
+
+      return (
+        elementMatched &&
+        tenGodMatched &&
+        structureMatched &&
+        matchesSearch(type, query)
+      );
     });
-  }, [family, query, tone]);
+  }, [element, query, structure, tenGod]);
 
   return (
     <>
-      <section className="mx-auto mt-7 max-w-md rounded-3xl border border-[#e7efe4] bg-white p-5 shadow-sm shadow-[#38463b]/5 sm:max-w-4xl">
-        <div className="grid gap-4 lg:grid-cols-[1fr_180px_180px]">
+      <section className="mx-auto mt-7 max-w-md rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-4 sm:max-w-6xl sm:p-6">
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-[minmax(0,1.2fr)_140px_170px_190px]">
           <label className="block">
-            <span className="text-xs font-black tracking-[0.16em] text-[#6f7c73]">
-              搜索标签
+            <span className="text-xs font-bold tracking-[0.16em] text-[var(--muted)]">
+              搜索命格
             </span>
             <input
-              className="mt-2 h-12 w-full rounded-2xl border border-[#dce4d9] bg-[#fbfdfb] px-4 text-sm outline-none transition focus:border-[#8ca58b] focus:ring-4 focus:ring-[#8ca58b]/15"
+              className={`${filterControlClass} border-[var(--line)] bg-[var(--surface-pure)] text-[var(--ink)] placeholder:text-[var(--muted)] hover:border-[var(--line-strong)]`}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="中文名 / 英文名 / 关键词 / 吐槽"
+              placeholder="命格主名 / 传播名 / 关键词"
               value={query}
             />
           </label>
 
           <label className="block">
-            <span className="text-xs font-black tracking-[0.16em] text-[#6f7c73]">
-              视觉家族
+            <span className="text-xs font-bold tracking-[0.16em] text-[var(--muted)]">
+              五行
             </span>
             <select
-              className="mt-2 h-12 w-full rounded-2xl border border-[#dce4d9] bg-[#fbfdfb] px-4 text-sm font-semibold outline-none"
+              className={`${filterControlClass} font-semibold ${
+                element === "all" ? inactiveSelectClass : activeSelectClass
+              }`}
               onChange={(event) =>
-                setFamily(event.target.value as VisualFamily | "all")
+                setElement(event.target.value as ElementFamily | AllOption)
               }
-              value={family}
+              value={element}
             >
-              {familyOptions.map((item) => (
+              <option value="all">全部五行</option>
+              {elementFamilyOptions.map((item) => (
                 <option key={item} value={item}>
-                  {item === "all" ? "全部家族" : visualFamilyLabels[item]}
+                  {elementThemes[item].name}
                 </option>
               ))}
             </select>
           </label>
 
           <label className="block">
-            <span className="text-xs font-black tracking-[0.16em] text-[#6f7c73]">
-              语气
+            <span className="text-xs font-bold tracking-[0.16em] text-[var(--muted)]">
+              十神灵相
             </span>
             <select
-              className="mt-2 h-12 w-full rounded-2xl border border-[#dce4d9] bg-[#fbfdfb] px-4 text-sm font-semibold outline-none"
-              onChange={(event) => setTone(event.target.value as TypeTone | "all")}
-              value={tone}
+              className={`${filterControlClass} font-semibold ${
+                tenGod === "all" ? inactiveSelectClass : activeSelectClass
+              }`}
+              onChange={(event) =>
+                setTenGod(event.target.value as TenGod | AllOption)
+              }
+              value={tenGod}
             >
-              {toneOptions.map((item) => (
+              <option value="all">全部十神</option>
+              {tenGodOptions.map((item) => (
                 <option key={item} value={item}>
-                  {item === "all" ? "全部语气" : item}
+                  {item} · {tenGodArchetypes[item]}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className="block">
+            <span className="text-xs font-bold tracking-[0.16em] text-[var(--muted)]">
+              十神结构倾向
+            </span>
+            <select
+              className={`${filterControlClass} font-semibold ${
+                structure === "all" ? inactiveSelectClass : activeSelectClass
+              }`}
+              onChange={(event) => setStructure(event.target.value)}
+              value={structure}
+            >
+              <option value="all">全部结构</option>
+              {structureOptions.map((item) => (
+                <option key={item} value={item}>
+                  {getStructureDisplayName(item)}
                 </option>
               ))}
             </select>
           </label>
         </div>
 
-        <div className="mt-5 flex flex-wrap gap-2 text-xs font-bold text-[#627067]">
-          <span className="rounded-full bg-[#eef4eb] px-3 py-1">
+        <div className="mt-5 flex flex-wrap gap-2 border-t border-[var(--line)] pt-4 text-xs font-semibold text-[var(--muted)]">
+          <span className="rounded-md border border-[var(--line-strong)] bg-[var(--ink)] px-3 py-1.5 text-[var(--white)]">
             全部标签 {destinyTypes.length}
           </span>
-          {familyOptions
-            .filter((item): item is VisualFamily => item !== "all")
-            .map((item) => (
-              <span className="rounded-full bg-[#f6f8f1] px-3 py-1" key={item}>
-                {visualFamilyLabels[item]} {familyCounts[item] ?? 0}
-              </span>
-            ))}
-          <span className="rounded-full bg-white px-3 py-1 text-[#7b887f]">
+          {elementFamilyOptions.map((item) => (
+            <span
+              className="rounded-md border border-[var(--line)] bg-[var(--surface-pure)] px-3 py-1.5 text-[var(--ink-soft)]"
+              key={item}
+            >
+              {elementThemes[item].name} {elementCounts[item] ?? 0}
+            </span>
+          ))}
+          <span className="rounded-md border border-[var(--line)] bg-[var(--surface-pure)] px-3 py-1.5 text-[var(--muted)]">
             当前显示 {filteredTypes.length}
           </span>
         </div>

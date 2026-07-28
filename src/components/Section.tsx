@@ -8,9 +8,13 @@ export function Section({
   children: ReactNode;
 }) {
   return (
-    <section className="rounded-3xl bg-white p-5 shadow-sm shadow-[#38463b]/5">
-      <h2 className="mb-3 text-base font-bold text-[#202822]">{title}</h2>
-      <div className="text-sm leading-7 text-[#58645d]">{children}</div>
+    <section className="border-t border-[var(--line)] py-6">
+      <h2 className="mb-3 text-base font-bold tracking-[0.02em] text-[var(--ink)]">
+        {title}
+      </h2>
+      <div className="max-w-prose text-[15px] leading-7 text-[var(--ink-soft)]">
+        {children}
+      </div>
     </section>
   );
 }

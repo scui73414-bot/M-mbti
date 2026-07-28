@@ -3,7 +3,6 @@ import type {
   ElementBias,
   EnergyMode,
   TenGodGroup,
-  VisualFamily,
 } from "@/data/types";
 import type { BirthInput } from "@/lib/bazi/types";
 import { hashString } from "@/lib/matching/hash";
@@ -13,7 +12,6 @@ export type GeneratedProfile = {
   tenGodGroup: TenGodGroup;
   elementBias: ElementBias;
   energyMode: EnergyMode;
-  familyTendency: VisualFamily;
 };
 
 export const dayMasters: DayMaster[] = [
@@ -54,14 +52,6 @@ export const energyModes: EnergyMode[] = [
   "低耗",
 ];
 
-const visualFamilies: VisualFamily[] = [
-  "treasure",
-  "spark",
-  "quality",
-  "elegant",
-  "frostfire",
-];
-
 function pick<T>(items: T[], seed: string) {
   return items[hashString(seed) % items.length];
 }
@@ -87,23 +77,11 @@ export function generateProfileFromFingerprint(
   const elementBias = pick(elementBiases, `${fingerprint}:element`);
   const energyMode = pick(energyModes, `${fingerprint}:energy`);
 
-  const familyTendency =
-    tenGodGroup === "财星"
-      ? "treasure"
-      : tenGodGroup === "食伤"
-        ? "spark"
-        : tenGodGroup === "官杀"
-          ? "elegant"
-          : tenGodGroup === "印星"
-            ? "frostfire"
-            : pick(visualFamilies, `${fingerprint}:family`);
-
   return {
     dayMaster,
     tenGodGroup,
     elementBias,
     energyMode,
-    familyTendency,
   };
 }
 

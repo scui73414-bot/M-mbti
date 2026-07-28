@@ -1,16 +1,185 @@
-export type VisualFamily = "treasure" | "spark" | "quality" | "elegant" | "frostfire";
+import { minggeNames } from "@/data/minggeNames";
+import { getDestinyCardCopy } from "@/data/destinyCardCopy";
+
 export type DayMaster = "甲木" | "乙木" | "丙火" | "丁火" | "戊土" | "己土" | "庚金" | "辛金" | "壬水" | "癸水";
+export type TenGod = "比肩" | "劫财" | "食神" | "伤官" | "正财" | "偏财" | "正官" | "七杀" | "正印" | "偏印";
 export type TenGodGroup = "比劫" | "食伤" | "财星" | "官杀" | "印星";
 export type ElementBias = "木旺" | "火旺" | "土旺" | "金旺" | "水旺" | "平衡";
 export type EnergyMode = "外放" | "内收" | "慢热" | "高压" | "低耗";
-export type TypeRarity = "common" | "uncommon" | "rare";
-export type TypeTone = "自嘲" | "冷幽默" | "职场" | "社交" | "内耗" | "野心" | "审美";
+export type ElementFamily = "wood" | "fire" | "earth" | "metal" | "water";
 export type MatchProfile = { dayMasters: DayMaster[]; tenGodGroups: TenGodGroup[]; elementBiases: ElementBias[]; energyModes: EnergyMode[]; };
-export type DestinyType = { id: string; code: string; typeCode: string; visualFamily: VisualFamily; cardImage: string; nameCn: string; nameEn: string; subtitle: string; keywords: string[]; oneLiner: string; description: string[]; strengths: string[]; bugs: string[]; color: { primary: string; secondary: string; accent: string; background: string; }; character: { role: string; accessory: string[]; expression: string; }; baziMock: { dayMaster: DayMaster; tenGod: TenGodGroup; elementBias: ElementBias; energyMode: EnergyMode; }; matchProfile: MatchProfile; rarity?: TypeRarity; tone?: TypeTone; };
 
-export const visualFamilyLabels: Record<VisualFamily, string> = { treasure: "价值机会", spark: "省电光感", quality: "审美标准", elegant: "体面结果", frostfire: "外冷内热" };
+export type DestinyType = {
+  id: string;
+  code: string;
+  dayMasters: DayMaster[];
+  dominantTenGod: TenGod;
+  tenGodGroup: TenGodGroup;
+  elementFamily: ElementFamily;
+  structureKey: string;
+  requiredShenSha?: string[];
+  destinyMainName: string;
+  socialName: string;
+  nameEn?: string;
+  oneLiner: string;
+  keywords: string[];
+  spiritArchetype: string;
+  characterImage: string;
+  visualPrompt?: string;
+  basisTemplate: string;
+  description: string[];
+  strengths: string[];
+  cautions: string[];
+  matchProfile: MatchProfile;
+};
 
-export const destinyTypes: DestinyType[] = [
+export const elementThemes = {
+  wood: {
+    name: "木",
+    icon: "木",
+    primary: "#667c62",
+    background: "#f3f6ef",
+    motif: "枝叶、木纹、风纹",
+  },
+  fire: {
+    name: "火",
+    icon: "火",
+    primary: "#9b5548",
+    background: "#f8f1ed",
+    motif: "火纹、日轮、灯焰",
+  },
+  earth: {
+    name: "土",
+    icon: "土",
+    primary: "#8a7358",
+    background: "#f6f2e9",
+    motif: "山石、方印、地纹",
+  },
+  metal: {
+    name: "金",
+    icon: "金",
+    primary: "#76766f",
+    background: "#f3f3ef",
+    motif: "刃纹、铜镜、金石",
+  },
+  water: {
+    name: "水",
+    icon: "水",
+    primary: "#536c78",
+    background: "#eef3f5",
+    motif: "水纹、云气、涟漪",
+  },
+} as const satisfies Record<
+  ElementFamily,
+  {
+    name: string;
+    icon: string;
+    primary: string;
+    background: string;
+    motif: string;
+  }
+>;
+
+export const elementFamilyOptions: ElementFamily[] = [
+  "wood",
+  "fire",
+  "earth",
+  "metal",
+  "water",
+];
+
+export const tenGodOptions: TenGod[] = [
+  "比肩",
+  "劫财",
+  "食神",
+  "伤官",
+  "正财",
+  "偏财",
+  "正官",
+  "七杀",
+  "正印",
+  "偏印",
+];
+
+export const tenGodArchetypes: Record<TenGod, string> = {
+  比肩: "同行灵相",
+  劫财: "夺锋灵相",
+  食神: "造物灵相",
+  伤官: "破局灵相",
+  正财: "守藏灵相",
+  偏财: "猎机灵相",
+  正官: "执律灵相",
+  七杀: "镇煞灵相",
+  正印: "藏书灵相",
+  偏印: "观星灵相",
+};
+
+type LegacyVisualFamily =
+  | "treasure"
+  | "spark"
+  | "quality"
+  | "elegant"
+  | "frostfire";
+type LegacyTypeRarity = "common" | "uncommon" | "rare";
+type LegacyTypeTone =
+  | "自嘲"
+  | "冷幽默"
+  | "职场"
+  | "社交"
+  | "内耗"
+  | "野心"
+  | "审美";
+type LegacyDestinyType = {
+  id: string;
+  code: string;
+  typeCode: string;
+  visualFamily: LegacyVisualFamily;
+  cardImage: string;
+  nameCn: string;
+  nameEn: string;
+  subtitle: string;
+  keywords: string[];
+  oneLiner: string;
+  description: string[];
+  strengths: string[];
+  bugs: string[];
+  color: {
+    primary: string;
+    secondary: string;
+    accent: string;
+    background: string;
+  };
+  character: {
+    role: string;
+    accessory: string[];
+    expression: string;
+  };
+  baziMock: {
+    dayMaster: DayMaster;
+    tenGod: TenGodGroup;
+    elementBias: ElementBias;
+    energyMode: EnergyMode;
+  };
+  matchProfile: MatchProfile;
+  rarity?: LegacyTypeRarity;
+  tone?: LegacyTypeTone;
+};
+
+/**
+ * 只用于说明旧数据如何迁移；新匹配、新筛选和新组件不得读取此映射。
+ */
+export const legacyVisualFamilyMigration: Record<
+  LegacyVisualFamily,
+  ElementFamily
+> = {
+  treasure: "earth",
+  spark: "fire",
+  quality: "metal",
+  elegant: "wood",
+  frostfire: "water",
+};
+
+const legacyDestinyTypes: LegacyDestinyType[] = [
   {
     id: "treasure",
     code: "MG-01",
@@ -1777,6 +1946,187 @@ export const destinyTypes: DestinyType[] = [
   },
 ];
 
+const tenGodsByGroup: Record<TenGodGroup, readonly [TenGod, TenGod]> = {
+  比劫: ["比肩", "劫财"],
+  食伤: ["食神", "伤官"],
+  财星: ["正财", "偏财"],
+  官杀: ["正官", "七杀"],
+  印星: ["正印", "偏印"],
+};
+
+const elementFamilyByDayMaster: Record<DayMaster, ElementFamily> = {
+  甲木: "wood",
+  乙木: "wood",
+  丙火: "fire",
+  丁火: "fire",
+  戊土: "earth",
+  己土: "earth",
+  庚金: "metal",
+  辛金: "metal",
+  壬水: "water",
+  癸水: "water",
+};
+
+export const structureDisplayNames: Record<string, string> = {
+  "sha-yin-mutual": "杀印相生",
+  "guan-yin-mutual": "官印相生",
+  "shi-shen-controls-sha": "食神制杀",
+  "shang-guan-with-yin": "伤官佩印",
+  "shi-shen-generates-wealth": "食神生财",
+  "shang-guan-generates-wealth": "伤官生财",
+  "output-generates-wealth": "食伤生财",
+  "wealth-generates-official": "财官相生",
+  "seal-peer-support": "印比相扶",
+  "peer-carries-wealth": "比劫担财",
+};
+
+function getLegacySerial(code: string) {
+  const value = Number(code.replace(/^MG-/, ""));
+  return Number.isFinite(value) ? value : 1;
+}
+
+function resolveLegacyDominantTenGod(
+  legacy: LegacyDestinyType,
+  legacyIndex: number,
+): TenGod {
+  const pair = tenGodsByGroup[legacy.baziMock.tenGod];
+  const groupOrdinal = legacyDestinyTypes
+    .slice(0, legacyIndex)
+    .filter(
+      (item) => item.baziMock.tenGod === legacy.baziMock.tenGod,
+    ).length;
+
+  // 旧数据只记录到十神组，无法反推出精确十神。这里仅为 84 个标签的
+  // 角色原型做稳定、均匀的迁移；用户结果仍以实算 dominantTenGod 为准。
+  return pair[groupOrdinal % pair.length];
+}
+
+function resolveStructureKey(
+  legacy: LegacyDestinyType,
+  dominantTenGod: TenGod,
+) {
+  const groups = new Set(legacy.matchProfile.tenGodGroups);
+
+  if (dominantTenGod === "七杀" && groups.has("印星")) {
+    return "sha-yin-mutual";
+  }
+  if (dominantTenGod === "正官" && groups.has("印星")) {
+    return "guan-yin-mutual";
+  }
+  if (dominantTenGod === "食神" && groups.has("官杀")) {
+    return "shi-shen-controls-sha";
+  }
+  if (dominantTenGod === "伤官" && groups.has("印星")) {
+    return "shang-guan-with-yin";
+  }
+  if (dominantTenGod === "食神" && groups.has("财星")) {
+    return "shi-shen-generates-wealth";
+  }
+  if (dominantTenGod === "伤官" && groups.has("财星")) {
+    return "shang-guan-generates-wealth";
+  }
+  if (groups.has("食伤") && groups.has("财星")) {
+    return "output-generates-wealth";
+  }
+  if (groups.has("财星") && groups.has("官杀")) {
+    return "wealth-generates-official";
+  }
+  if (groups.has("印星") && groups.has("比劫")) {
+    return "seal-peer-support";
+  }
+  if (groups.has("比劫") && groups.has("财星")) {
+    return "peer-carries-wealth";
+  }
+
+  return `ten-god:${dominantTenGod}`;
+}
+
+export function getStructureDisplayName(
+  structureKey: string,
+  dominantTenGod?: TenGod,
+) {
+  return (
+    structureDisplayNames[structureKey] ??
+    (structureKey.startsWith("ten-god:")
+      ? `${structureKey.slice("ten-god:".length)}显影`
+      : `${dominantTenGod ?? "十神"}显影`)
+  );
+}
+
+function normalizeCode(code: string) {
+  return `MG-${String(getLegacySerial(code)).padStart(3, "0")}`;
+}
+
+function migrateLegacyDestinyType(
+  legacy: LegacyDestinyType,
+  legacyIndex: number,
+): DestinyType {
+  const dominantTenGod = resolveLegacyDominantTenGod(
+    legacy,
+    legacyIndex,
+  );
+  const elementFamily = elementFamilyByDayMaster[legacy.baziMock.dayMaster];
+  const structureKey = resolveStructureKey(legacy, dominantTenGod);
+  const cardCopy = getDestinyCardCopy(legacy.code);
+  const destinyMainName = getStructureDisplayName(
+    structureKey,
+    dominantTenGod,
+  );
+  const socialName =
+    cardCopy?.socialName ?? minggeNames[legacy.id]?.socialName ?? legacy.nameCn;
+  const spiritArchetype = tenGodArchetypes[dominantTenGod];
+  const theme = elementThemes[elementFamily];
+
+  return {
+    id: legacy.id,
+    code: normalizeCode(legacy.code),
+    dayMasters: [...legacy.matchProfile.dayMasters],
+    dominantTenGod,
+    tenGodGroup: legacy.baziMock.tenGod,
+    elementFamily,
+    structureKey,
+    destinyMainName,
+    socialName,
+    nameEn: legacy.nameEn,
+    oneLiner: cardCopy?.oneLiner ?? legacy.oneLiner,
+    keywords: [...(cardCopy?.keywords ?? legacy.keywords)],
+    spiritArchetype,
+    characterImage: `/characters/destiny-card/characters/mg-${String(getLegacySerial(legacy.code)).padStart(2, "0")}.png`,
+    visualPrompt: [
+      `${theme.name}行低饱和视觉，${theme.motif}`,
+      `${dominantTenGod}对应${spiritArchetype}`,
+      `角色身份：${legacy.character.role}`,
+      `动作与道具：${legacy.character.accessory.join("、")}`,
+      `神态：${legacy.character.expression}`,
+      "透明或干净浅底人物 PNG，无文字、无卡框、无水印",
+    ].join("；"),
+    basisTemplate:
+      "{{dayMaster}}日主 · {{dominantTenGod}}主导 · {{structure}} · {{elementBias}}",
+    description: legacy.description.map((paragraph) =>
+      paragraph.replaceAll(legacy.nameCn, socialName),
+    ),
+    strengths: [...legacy.strengths],
+    cautions: [...legacy.bugs],
+    matchProfile: {
+      dayMasters: [...legacy.matchProfile.dayMasters],
+      tenGodGroups: [...legacy.matchProfile.tenGodGroups],
+      elementBiases: [...legacy.matchProfile.elementBiases],
+      energyModes: [...legacy.matchProfile.energyModes],
+    },
+  };
+}
+
+export const destinyTypes: DestinyType[] = legacyDestinyTypes.map(
+  migrateLegacyDestinyType,
+);
+
+export const structureOptions = Array.from(
+  new Set(destinyTypes.map((type) => type.structureKey)),
+);
+
 export function getDestinyType(id?: string | null) {
-  return destinyTypes.find((item) => item.id === id) ?? destinyTypes.find((item) => item.id === "quality") ?? destinyTypes[0];
+  return (
+    destinyTypes.find((item) => item.id === id) ??
+    destinyTypes[0]
+  );
 }
